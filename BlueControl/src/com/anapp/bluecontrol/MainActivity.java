@@ -61,16 +61,6 @@ public class MainActivity extends Activity {
     
     Set<BluetoothDevice> pairedDevices = btAdapter.getBondedDevices();
     
-//    if (pairedDevices.size() > 0) {
-//       for (BluetoothDevice device : pairedDevices) {
-//    	
-//        String deviceBTName = device.getName();
-//        text.setText(text.getText() + " Device: " + deviceBTName);
-//        if (deviceBTName.equals("HC-06")){
-//        	address = device.getAddress();
-//        }
-//       }
-//   }
   }
   
   public void ledOn(View v){
@@ -130,25 +120,6 @@ public class MainActivity extends Activity {
       errorExit("Fatal Error", "In onResume() and output stream creation failed:" + e.getMessage() + ".");
     }
   }
-
-//  @Override
-//  public void onPause() {
-//    super.onPause();
-//
-////    if (outStream != null) {
-////      try {
-////        outStream.flush();
-////      } catch (IOException e) {
-////        errorExit("Fatal Error", "In onPause() and failed to flush output stream: " + e.getMessage() + ".");
-////      }
-////    }
-//
-//    try     {
-//      btSocket.close();
-//    } catch (IOException e2) {
-//      errorExit("Fatal Error", "In onPause() and failed to close socket." + e2.getMessage() + ".");
-//    }
-//  }
   
   private void checkBTState() {
     // Check for Bluetooth support and then check to make sure it is turned on
